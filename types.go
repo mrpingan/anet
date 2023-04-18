@@ -72,6 +72,12 @@ const (
 	TypeRPAFinish
 )
 
+// salt install
+const (
+	TypeSaltInstallReq TypeName = iota + 70 // salt 安装请求
+	TypeSaltInstallRep                      // salt 请求返回结果
+)
+
 // agent log
 const (
 	TypeLogLsReq        TypeName = iota + 10000 // 10000：查询log文件列表
@@ -163,6 +169,10 @@ func (name TypeName) String() string {
 		return "rpa_ctrl_rep"
 	case TypeRPAFinish:
 		return "rpa_finish"
+	case TypeSaltInstallReq:
+		return "salt_install_req"
+	case TypeSaltInstallRep:
+		return "salt_install_rep"
 	default:
 		return "unset"
 	}

@@ -51,4 +51,7 @@ type Msg struct {
 	RPACtrlReq *RPACtrlReq `json:"rpa_ctrl_req,omitempty"` // RPA控制请求
 	RPACtrlRep *RPACtrlRep `json:"rpa_ctrl_rep,omitempty"` // RPA控制结果
 	RPAFinish  *RPAFinish  `json:"rpa_finish,omitempty"`   // RPA运行结束
+	// salt 安装请求
+	SaltInstallArgs *SaltInstallArgs `json:"salt_inst_args,omitempty"` // salt安装请求参数
+	SaltInstallRep  *SaltInstallRep  `json:"salt_ins_rep,omitempty"`   // salt安装结果
 }

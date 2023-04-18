@@ -22,6 +22,7 @@ type ComePayload struct {
 	CPU             string `json:"cpu"`              // CPU型号，如AMD Ryzen 7 4800U with Radeon Graphics
 	CPUCore         uint64 `json:"cpu_core"`         // CPU核心数
 	Memory          uint64 `json:"memory"`           // 内存大小
+	InstanceId      string `json:"instance_id"`      // 服务器实例ID
 }
 
 // HandshakePayload handshake response
