@@ -78,6 +78,12 @@ const (
 	TypeSaltInstallRep                      // salt 请求返回结果
 )
 
+// version sync
+const (
+	TypeOpsVersionSyncReq TypeName = iota + 80 // 版本同步
+	TypeOpsVersionSyncRep
+)
+
 // agent log
 const (
 	TypeLogLsReq        TypeName = iota + 10000 // 10000：查询log文件列表
@@ -173,6 +179,10 @@ func (name TypeName) String() string {
 		return "salt_install_req"
 	case TypeSaltInstallRep:
 		return "salt_install_rep"
+	case TypeOpsVersionSyncReq:
+		return "version_sync_req"
+	case TypeOpsVersionSyncRep:
+		return "version_sync_rep"
 	default:
 		return "unset"
 	}
