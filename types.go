@@ -80,8 +80,12 @@ const (
 
 // version sync
 const (
-	TypeOpsVersionSyncReq TypeName = iota + 80 // 版本同步
-	TypeOpsVersionSyncRep
+	TypeOpsFullVersionSyncReq TypeName = iota + 80 // 全量版本同步
+	TypeOpsFullVersionSyncRep
+	TypeOpsPatchVersionSyncReq
+	TypeOpsPatchVersionSyncRep
+	TypeOpsSqlVersionSyncReq
+	TypeOpsSqlVersionSyncRep
 )
 
 // agent log
