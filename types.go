@@ -183,10 +183,18 @@ func (name TypeName) String() string {
 		return "salt_install_req"
 	case TypeSaltInstallRep:
 		return "salt_install_rep"
-	case TypeOpsVersionSyncReq:
-		return "version_sync_req"
-	case TypeOpsVersionSyncRep:
-		return "version_sync_rep"
+	case TypeOpsFullVersionSyncReq:
+		return "full_version_sync_req"
+	case TypeOpsFullVersionSyncRep:
+		return "full_version_sync_rep"
+	case TypeOpsPatchVersionSyncReq:
+		return "patch_version_sync_req"
+	case TypeOpsPatchVersionSyncRep:
+		return "patch_version_sync_rep"
+	case TypeOpsSqlVersionSyncReq:
+		return "sql_version_sync_req"
+	case TypeOpsSqlVersionSyncRep:
+		return "sql_version_sync_rep"
 	default:
 		return "unset"
 	}

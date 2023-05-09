@@ -55,6 +55,6 @@ type Msg struct {
 	SaltInstallArgs *SaltInstallArgs `json:"salt_inst_args,omitempty"` // salt安装请求参数
 	SaltInstallRep  *SaltInstallRep  `json:"salt_ins_rep,omitempty"`   // salt安装结果
 	// 版本同步请求
-	OpsVersionSyncArgs *OpsVersionSyncArgs `json:"ops_verison_sync_args,omitempty"` // 版本同步安装请求
-	OpsVersionSyncRep  *OpsVersionSyncRep  `json:"ops_version_sync_rep,omitempty"`  // 版本同步结果
+	OpsFullVersionSyncArgs *OpsFullVersionSyncArgs `json:"ops_full_verison_sync_args,omitempty"` // 版本同步安装请求
+	OpsFullVersionSyncRep  *OpsFullVersionSyncRep  `json:"ops_full_version_sync_rep,omitempty"`  // 版本同步结果
 }
