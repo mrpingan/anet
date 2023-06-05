@@ -82,10 +82,25 @@ const (
 const (
 	TypeOpsFullVersionSyncReq TypeName = iota + 80 // 全量版本同步
 	TypeOpsFullVersionSyncRep
+	TypeOpsFullVersionSyncStatus
 	TypeOpsPatchVersionSyncReq
 	TypeOpsPatchVersionSyncRep
+	TypeOpsPatchVersionSyncStatus
 	TypeOpsSqlVersionSyncReq
 	TypeOpsSqlVersionSyncRep
+	TypeOpsSqlVersionSyncStatus
+	TypeOpsVersionUpdateReq
+	TypeOpsVersionUpdateStatus
+	TypeOpsVersionUpdateRep
+	TypeOpsServiceStartReq
+	TypeOpsServiceStartStatus
+	TypeOpsServiceStartRep
+	TypeOpsServiceStopReq
+	TypeOpsServiceStopStatus
+	TypeOpsServiceStopRep
+	TypeOpsCheckGameStatusReq
+	TypeOpsCheckGameStatusLog
+	TypeOpsCheckGameStatusRep
 )
 
 // agent log
@@ -187,14 +202,44 @@ func (name TypeName) String() string {
 		return "full_version_sync_req"
 	case TypeOpsFullVersionSyncRep:
 		return "full_version_sync_rep"
+	case TypeOpsFullVersionSyncStatus:
+		return "full_version_sync_status"
 	case TypeOpsPatchVersionSyncReq:
 		return "patch_version_sync_req"
 	case TypeOpsPatchVersionSyncRep:
 		return "patch_version_sync_rep"
+	case TypeOpsPatchVersionSyncStatus:
+		return "patch_version_sync_status"
 	case TypeOpsSqlVersionSyncReq:
 		return "sql_version_sync_req"
 	case TypeOpsSqlVersionSyncRep:
 		return "sql_version_sync_rep"
+	case TypeOpsSqlVersionSyncStatus:
+		return "sql_version_sync_status"
+	case TypeOpsVersionUpdateReq:
+		return "version_update_req"
+	case TypeOpsVersionUpdateRep:
+		return "version_update_rep"
+	case TypeOpsVersionUpdateStatus:
+		return "version_update_status"
+	case TypeOpsServiceStopReq:
+		return "service_stop_req"
+	case TypeOpsServiceStopStatus:
+		return "service_stop_status"
+	case TypeOpsServiceStopRep:
+		return "service_stop_rep"
+	case TypeOpsServiceStartReq:
+		return "service_start_req"
+	case TypeOpsServiceStartStatus:
+		return "service_start_status"
+	case TypeOpsServiceStartRep:
+		return "service_start_rep"
+	case TypeOpsCheckGameStatusReq:
+		return "check_game_status_req"
+	case TypeOpsCheckGameStatusLog:
+		return "check_game_status_log"
+	case TypeOpsCheckGameStatusRep:
+		return "check_game_status_rep"
 	default:
 		return "unset"
 	}

@@ -55,6 +55,22 @@ type Msg struct {
 	SaltInstallArgs *SaltInstallArgs `json:"salt_inst_args,omitempty"` // salt安装请求参数
 	SaltInstallRep  *SaltInstallRep  `json:"salt_ins_rep,omitempty"`   // salt安装结果
 	// 版本同步请求
-	OpsFullVersionSyncArgs *OpsFullVersionSyncArgs `json:"ops_full_verison_sync_args,omitempty"` // 版本同步安装请求
-	OpsFullVersionSyncRep  *OpsFullVersionSyncRep  `json:"ops_full_version_sync_rep,omitempty"`  // 版本同步结果
+	OpsFullVersionSyncArgs    *OpsFullVersionSyncArgs    `json:"ops_full_verison_sync_args,omitempty"`    // 版本同步安装请求
+	OpsFullVersionSyncRep     *OpsResp                   `json:"ops_full_version_sync_rep,omitempty"`     // 版本同步结果
+	OpsFullVersionSyncStatus  *OpsFullVersionSyncStatus  `json:"ops_full_version_sync_status,omitempty"`  // 版本同步状态
+	OpsPatchVersionSyncArgs   *OpsPatchVersionSyncArgs   `json:"ops_patch_version_sync_args,omitempty"`   // 版本补丁包安装参数
+	OpsPatchVersionSyncRep    *OpsResp                   `json:"ops_patch_version_sync_rep,omitempty"`    // 版本补丁包安装结果
+	OpsPatchVersionSyncStatus *OpsPatchVersionSyncStatus `json:"ops_patch_version_sync_status,omitempty"` // 版本补丁包安装状态
+	OpsVersionUpdateArgs      *OpsVersionUpdateArgs      `json:"ops_version_update_args,omitempty"`       // 版本更新参数
+	OpsVersionUpdateRep       *OpsResp                   `json:"ops_version_update_rep,omitempty"`        // 版本更新结果
+	OpsVersionUpdateStatus    *OpsVersionUpdateStatus    `json:"ops_version_update_status,omitempty"`     // 版本更新状态
+	OpsServiceStartArgs       *OpsServiceStartArgs       `json:"ops_service_start_args,omitempty"`        // 服务启动参数
+	OpsServiceStartRep        *OpsResp                   `json:"ops_service_start_rep,omitempty"`         // 服务启动响应
+	OpsServiceStartStatus     *OpsServiceStartStatus     `json:"ops_service_start_status,omitempty"`      // 服务启动状态
+	OpsServiceStopArgs        *OpsServiceStopArgs        `json:"ops_service_stop_args,omitempty"`         // 服务停止参数
+	OpsServiceStopRep         *OpsResp                   `json:"ops_service_stop_rep,omitempty"`          // 服务停止响应
+	OpsServiceStopStatus      *OpsServiceStopStatus      `json:"ops_service_stop_status,omitempty"`       // 服务停止状态
+	OpsCheckGameStatusArgs    *OpsCheckGameStatusArgs    `json:"ops_check_game_status_args,omitempty"`    // 服务状态检查参数
+	OpsCheckGameStatusRep     *OpsCheckGameStatusRep     `json:"ops_check_game_status_rep,omitempty"`     // 服务状态检查响应
+	OpsCheckGameStatusLog     *OpsCheckGameStatusLog     `json:"ops_check_game_status_log,omitempty"`     // 服务检查日志
 }
