@@ -156,8 +156,8 @@ type DistProcessStatus struct {
 }
 
 type OpsCheckGameStatusRep struct {
-	Time       int64                                     `json:"ts"`          // 返回时间戳
-	OK         bool                                      `json:"ok"`          // 请求是否正常
-	Msg        string                                    `json:"msg"`         // 错误信息
-	DistStatus map[string]map[string][]DistProcessStatus `json:"dist_status"` // 区组状态
+	Time       int64                          `json:"ts"`          // 返回时间戳
+	OK         bool                           `json:"ok"`          // 请求是否正常
+	Msg        string                         `json:"msg"`         // 错误信息
+	DistStatus map[string][]DistProcessStatus `json:"dist_status"` // 区组状态
 }
