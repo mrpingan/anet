@@ -147,6 +147,7 @@ type OpsCheckGameStatusLog struct {
 
 type DistProcessStatus struct {
 	Ok           bool   `json:"ok"`            // 状态是否正常
+	Host         string `json:"host"`          // 主机
 	Service      string `json:"service"`       // 服务
 	Ver          string `json:"ver"`           // 版本
 	ProcessCount int    `json:"process_count"` // 运行进程数
