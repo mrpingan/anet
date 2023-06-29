@@ -127,13 +127,11 @@ type OpsServiceStopStatus struct {
 }
 
 type OpsCheckGameStatusArgs struct {
-	Project        string   `json:"project"`          // 项目
-	ProjectShort   string   `json:"project_short"`    // 项目短名称
-	MaintainTaskID int      `json:"maintain_task_id"` // 任务ID
-	VerType        int      `json:"ver_type"`         // 版本类型
-	Ver            string   `json:"ver"`              // 版本号
-	AgentID        string   `json:"agent_id"`         // agent_id
-	DistList       []string `json:"dist_list"`        // dist 列表
+	Project      string `json:"project"`       // 项目
+	ProjectShort string `json:"project_short"` // 项目短名称
+	Ver          string `json:"ver"`           // 版本号
+	AgentID      string `json:"agent_id"`      // agent_id
+	DistName     string `json:"dist_name"`     // dist
 }
 
 type OpsCheckGameStatusLog struct {
@@ -147,6 +145,7 @@ type OpsCheckGameStatusLog struct {
 
 type DistProcessStatus struct {
 	Ok           bool   `json:"ok"`            // 状态是否正常
+	Dist         string `json:"dist_name"`     // dist name
 	Host         string `json:"host"`          // 主机
 	Service      string `json:"service"`       // 服务
 	Ver          string `json:"ver"`           // 版本
@@ -156,8 +155,8 @@ type DistProcessStatus struct {
 }
 
 type OpsCheckGameStatusRep struct {
-	Time       int64                          `json:"ts"`          // 返回时间戳
-	OK         bool                           `json:"ok"`          // 请求是否正常
-	Msg        string                         `json:"msg"`         // 错误信息
-	DistStatus map[string][]DistProcessStatus `json:"dist_status"` // 区组状态
+	Time       int64             `json:"ts"`          // 返回时间戳
+	OK         bool              `json:"ok"`          // 请求是否正常
+	Msg        string            `json:"msg"`         // 错误信息
+	DistStatus DistProcessStatus `json:"dist_status"` // 区组状态
 }
