@@ -150,7 +150,8 @@ type DistProcessStatus struct {
 	Service      string `json:"service"`       // 服务
 	Ver          string `json:"ver"`           // 版本
 	ProcessCount int    `json:"process_count"` // 运行进程数
-	ErrMsg       string `json:"err_msg"`       // 错误信息
+	ErrMsg       string `json:"err_msg"`       // 错误信息详情
+	ErrMsgShort  string `json:"err_msg_short"` // 错误信息
 }
 
 type OpsCheckGameStatusRep struct {
