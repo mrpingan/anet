@@ -129,9 +129,9 @@ type OpsServiceStopStatus struct {
 type OpsCheckGameStatusArgs struct {
 	Project      string `json:"project"`       // 项目
 	ProjectShort string `json:"project_short"` // 项目短名称
-	Ver          string `json:"ver"`           // 版本号
 	AgentID      string `json:"agent_id"`      // agent_id
 	DistName     string `json:"dist_name"`     // dist
+	Type         string `json:"type"`          // 类型，启动还是停止
 }
 
 type OpsCheckGameStatusLog struct {
